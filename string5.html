@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Номера автомобилей</title>
+  </head>
+  <body>
+    <script>
+      const regex = /b[0-9]{3}b/;
+
+      let array = [];
+      for (let i = 0; i < 10; i++) {
+        array.push(`b${Math.floor(Math.random() * 1000)}bb`);
+      }
+
+      console.log("Массив строк:");
+      array.forEach((value) => console.log(value));
+
+      let matches = array.filter((str) => str.match(regex));
+
+      console.log("\nСтроки, соответствующие регулярному выражению:");
+      matches.forEach((match) => console.log(match));
+    </script>
+  </body>
+</html>

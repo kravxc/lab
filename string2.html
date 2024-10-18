@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const R = [
+        "Hello world",
+        "This is a test",
+        "Goodbye",
+        "JavaScript is fun",
+        "hello there",
+        "Programming",
+        "hello again",
+        "Welcome to the jungle",
+        "Say hello",
+        "Testing hello",
+        "Final element",
+      ];
+
+      function countHello(array) {
+        return array.filter((element) =>
+          element.toLowerCase().includes("hello")
+        ).length;
+      }
+      function printFirstTwoOfEleven(array) {
+        if (array[10]) {
+          return array[10].substring(0, 2);
+        } else {
+          console.log("11-й элемент отсутствует");
+        }
+      }
+      function printLastThreeOfThirdElement(array) {
+        const thirdElement = array[2];
+        if (array[2]) {
+          return thirdElement.substring(thirdElement.length - 3);
+        } else {
+          console.log("3-й элемент отсутствует");
+        }
+      }
+      console.log(R);
+      console.log(`Количество элементов с 'hello': ${countHello(R)}`);
+      console.log(
+        `Первые 2 символа 11-го элемента: ${printFirstTwoOfEleven(R)}`
+      );
+
+      console.log(
+        `Последниe 3 символа третьего элемента ${printLastThreeOfThirdElement(
+          R
+        )} `
+      );
+    </script>
+  </body>
+</html>

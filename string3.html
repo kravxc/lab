@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function palindrom(str) {
+        str1 = str.toLowerCase();
+        str2 = str.split("").reverse().join("").toLowerCase();
+
+        if (str1 === str2) {
+          console.log("Слово является палиндромом ヘ( ^o^)ノ＼(^_^ )");
+        } else {
+          console.log("Oops, this is not a polydrome ༼ つ ◕_◕ ༽つ");
+        }
+      }
+      console.log(palindrom("gfsdgjk;l"));
+    </script>
+  </body>
+</html>
